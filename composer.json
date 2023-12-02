@@ -13,6 +13,7 @@
             "email": "rasyid@sekeco.id"
         }
     ],
+    "license": "MIT",
     "require": {
         "illuminate/database": "^10.34"
     }
