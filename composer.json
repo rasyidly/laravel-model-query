@@ -1,0 +1,19 @@
+{
+    "name": "rasyidly/laravel-model-query",
+    "description": "Advanced laravel dynamic model queries",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "Rasyidly\\ModelQuery\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "rasyidly",
+            "email": "rasyid@sekeco.id"
+        }
+    ],
+    "require": {
+        "illuminate/database": "^10.34"
+    }
+}
