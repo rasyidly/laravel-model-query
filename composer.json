@@ -15,6 +15,6 @@
     ],
     "license": "MIT",
     "require": {
-        "illuminate/database": "^10.34"
+        "illuminate/database": "^10.0"
     }
 }
