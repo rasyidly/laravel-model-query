@@ -12,7 +12,7 @@ trait Sortable
     public function scopeSortable(Builder $builder, $string = ''): Builder
     {
         $col = explode(',', $string);
-        if (count($col) == 2 && preg_match('/(?i)\w+,(?:asc|desc)/', $string) && in_array($col[0], $this->getFillable())) {
+        if (count($col) == 2 && preg_match('/(?i)\w+,(?:asc|desc)/', $string) && in_array($col[0], $this->getSortableColumns())) {
             return $builder->orderBy($col[0], $col[1]);
         }
         return $builder;
