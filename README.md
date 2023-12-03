@@ -8,7 +8,7 @@ Advanced laravel dynamic model queries
 Install this package with composer
 
 ```bash
-  composer require rasyidly/laravel-model-query
+composer require rasyidly/laravel-model-query
 ```
     
 ## Usage
@@ -49,7 +49,7 @@ class Post extends Model
 
     public $loadable = [
         'author.profile', 'commentable'
-    ]
+    ];
 
     public function author (): BelongsTo { ... }
 }
@@ -88,7 +88,7 @@ class Post extends Model
 
     public $searchable = [
         'title', 'description', 'author.name'
-    ]
+    ];
 
     public function author (): BelongsTo { ... }
 }
@@ -114,7 +114,7 @@ class Post extends Model
 
     public $sortable = [
         'name'
-    ]
+    ];
 }
 ```
 
