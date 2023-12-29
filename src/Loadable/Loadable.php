@@ -23,10 +23,23 @@ trait Loadable
     }
 
     /**
-     * Get loadable releations.
+     * Get loadable relations.
      */
     private function getLoadableRelations(): array
     {
-        return $this->loadable ?? [];
+        $rels = $this->loadable ?? [];
+        $result = [];
+        foreach ($rels as $element) {
+            $parts = explode('.', $element);
+            $temp = '';
+            foreach ($parts as $part) {
+                $temp .= $part;
+                if (!in_array($temp, $result)) {
+                    array_push($result, $temp);
+                }
+                $temp .= '.';
+            }
+        }
+        return $result;
     }
 }
